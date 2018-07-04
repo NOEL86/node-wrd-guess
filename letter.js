@@ -1,20 +1,25 @@
 
 
-function Game(letter, guessed) {
-    this.letter = "letter",
-        this.guessed = false,
+function Letter(letter) {
+    this.letter = letter;
+    this.guessed = false,
         this.placeholder = function () {
-            if (guessed === false) {
-                console.log("_");
+            if (this.guessed === false) {
+                return "_";
             }
+            return this.letter
+        }
 
-        }
-    this.correct = function () {
-        var guessedLetter = "letter";
-        if (guessedLetter === true) {
-            guessed = true;
+    this.correct = function (guessedLetter) {
+
+        if (guessedLetter === this.letter) {
+            this.guessed = true;
             console.log(guessedLetter);
-            console.log("Correct!")
+            return true;
         }
+        return false;
+
     }
 }
+
+module.exports = Letter
