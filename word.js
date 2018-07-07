@@ -1,5 +1,6 @@
 var Letter = require('./letter.js');
 
+var numGuesses = 20;
 
 function Word(word) {
     this.word = word;
@@ -36,6 +37,11 @@ function Word(word) {
             }
         }
 
+        // if (this.splitLetterCon.length.correct(userGuess)) {
+        //     console.log("You guessed it!");
+        //     return;
+        // } //attempting to get the game to stop and the player be able to win
+
         if (guessedCorrectly) {
             console.log(this.underscores.join(" "));
             return true;
@@ -45,7 +51,17 @@ function Word(word) {
             console.log(this.underscores.join(" "));
             return false;
         }
+
     }
+    // this.win = function (userGuess) {
+
+
+    //     numGuesses = userGuess.value();
+    //     if (numGuesses === 20) {
+    //         console.log("You Lose!");
+    //         return;
+    //     }
+    // } // another attempt at winning and also for the user to be able to lose based on num guesses
 
 }
 module.exports = Word

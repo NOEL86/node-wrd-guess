@@ -2,9 +2,7 @@ var Word = require('./word.js');
 var inquirer = require("inquirer");
 
 var words = ["alladin", "thelionking", "thelittlemermaid",
-    "ladyandthetramp", "foxandthehound"];
-
-var numGuesses = 20;
+    "ladyandthetramp", "foxandthehound", "emporersnewgroove", "thekid"];
 
 
 
@@ -52,7 +50,7 @@ inquirer.prompt([
 
     if (answers.confirm === true) {
         console.log("\nWelcome to Disney Movie Hangman!");
-        console.log(wordConObj);
+        // console.log(wordConObj);
         wordConObj.splitWord();
         askPlayerForLetter();
     } else {

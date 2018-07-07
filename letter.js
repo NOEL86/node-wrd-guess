@@ -14,7 +14,7 @@ function Letter(letter) {
 
         if (guessedLetter === this.letter) {
             this.guessed = true;
-            console.log(guessedLetter);
+            // console.log(guessedLetter);
             return true;
         }
         return false;
